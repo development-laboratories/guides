@@ -5,74 +5,19 @@ The following guide will teach you how to build and publish a public package to 
 
 ## Quick Start
 
-Clone a GitHub repository you own and paste the following into a file called `quick-start.sh`
-<detail>
-  <summary>Click to view source code</summary>
+- Method #1: Download Installer
 ```bash
-#!/bin/bash
-#
-# create a new file named dnode.sh and paste this file into it,
-# then run the following command in the terminal:
-#
-#     bash quick-start.sh
-#
-
-# add node_modules to .gitignore
-echo "node_modules/" > .gitignore
-echo "dist/" >> .gitignore
-
-# create subdirectories
-mkdir src
-mkdir dist
-mkdir test
-
-# create a hellow world typescript file
-echo "console.log('Hello World');" > src/index.ts
-
-# create tsconfig.json
-echo '{
-  "compilerOptions": {
-    "outDir": "./dist/",
-    "target": "es5",
-    "module": "commonjs",
-    "strict": true,
-    "esModuleInterop": true
-  },
-  "exclude": [
-    "node_modules/**/*"
-  ]
-}' > tsconfig.json
-
-# install jest
-# npm i -d jest ts-jest @types/jest
-
-# initialize npm and install typescript
-echo '{
-  "name": "dnode",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
-    "start": "node dist/index.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@types/jest": "^29.5.1",
-    "jest": "^29.5.0",
-    "ts-jest": "^29.1.0",
-    "typescript": "^5.0.4"
-  },
-  "description": ""
-}' > package.json
-
-# build & start the project
-npm install
-npm run build
-npm run start
+curl -O -L https://github.com/development-laboratories/scripts/releases/download/v1.0.0/dnode.sh
+bash dnode.sh
 ```
+- Method #2: Manually Create Installer
+Clone a GitHub repository you own and paste the following into a file called `quick-start.sh`
+<details>
+  <summary>Click to view source code</summary>
+  
+  ```bash
+  curl https://dlabs.me
+  ```
 </details>
 
 and the run the script with the following command

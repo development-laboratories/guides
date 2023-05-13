@@ -3,19 +3,19 @@ By Colin Teahan - May 12th, 2023
 
 The following guide will teach you how to build and publish a public package to npm.
 
-## Quick Start
+# Quick Start
 
 Use the following options to quickly get started or skip to the next section.
 
-###Method #1: Download Installer
+## Method #1: Download Installer
 ```bash
 curl -O -L https://github.com/development-laboratories/scripts/releases/download/v1.0.0/dnode.sh
 bash dnode.sh
 ```
-###Method #2: Manually Create Installer
+## Method #2: Manually Create Installer
 Clone a GitHub repository you own and paste the following into a file called `quick-start.sh`
 <details>
-  <summary>Click to view source code</summary>
+  <summary><i>Click to view source code</i></summary>
   
   ```bash
   curl https://dlabs.me
@@ -28,7 +28,7 @@ and the run the script with the following command
 bash quick-start.sh
 ```
 
-## Getting Started
+# Getting Started
 
 This guide was written using the versions listed below, for best results use similar versions.
 

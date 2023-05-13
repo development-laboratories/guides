@@ -5,10 +5,10 @@ The following guide will teach you how to build and publish a public package to 
 
 |software|version|resources|
 |--------|-------|--------|
-|bash    |3.2.57 |https://formulae.brew.sh/formula/bash|
-|node    |16.15.0|https://nodejs.org/en/download|
-|npm     |7.5.2  |https://docs.npmjs.com/downloading-and-installing-node-js-and-npm|
-|npx     |8.5.5  |https://www.npmjs.com/package/npx|
+|bash    |3.2.57 |[learn more](https://formulae.brew.sh/formula/bash)|
+|node    |16.15.0|[learn more](https://nodejs.org/en/download)|
+|npm     |7.5.2  |[learn more](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)|
+|npx     |8.5.5  |[learn more](https://www.npmjs.com/package/npx)|
 
 # Quick Start
 

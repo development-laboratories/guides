@@ -48,5 +48,5 @@ now make sure to replace the following items with your values, below is an examp
 |--------|-----------|-------|
 |YOUR_SCOPE|This will either be your GitHub @username or @org and your add the @ symbol in front.| @development-laboratories |
 |YOUR_REPO_NAME|The name of the repository you created earlier|guide|
-|YOUR_REPO_URL|The git url of the repository you created earlier| git+ssh@github.com/development-laboratories/guide|
+|YOUR_REPO_URL|The git url of the repository you created earlier| git@github.com:development-laboratories/guides.git |
 |YOUR_NAME|Any name you want to be associated|John Doe|

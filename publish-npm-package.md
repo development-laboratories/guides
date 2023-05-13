@@ -5,28 +5,13 @@ The following guide will teach you how to build and publish a public package to 
 
 # Quick Start
 
-Use the following options to quickly get started or skip to the next section.
+For experienced users clone a blank GitHub repository to your machine and run the following in the projects root directory:
 
-## Method #1: Download Installer
 ```bash
 curl -O -L https://github.com/development-laboratories/scripts/releases/download/v1.0.0/dnode.sh
 bash dnode.sh
 ```
-## Method #2: Manually Create Installer
-Clone a GitHub repository you own and paste the following into a file called `quick-start.sh`
-<details>
-  <summary><i>Click to view source code</i></summary>
-  
-  ```bash
-  curl https://dlabs.me
-  ```
-</details>
-
-and the run the script with the following command
-
-```bash
-bash quick-start.sh
-```
+Otherwise skip to the next section.
 
 # Getting Started
 

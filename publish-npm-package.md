@@ -11,9 +11,15 @@ This guide was written using the versions listed below, for best results use sim
 |----|-------|
 |7.5.2 |12.22.12|
 
+## Create GitHub Repository
+
 The first thing we are going to want to do is create a simple project which will become our custom pacakge. Go to [GitHub](https://github.com/) and create and account if needed.
 
-Once you are logged in let's create a new repository and clone that to your local machine, navigate to the directory, and open a bash shell then type:
+Once you are logged in let's create a new repository and clone that to your local machine.
+
+# Initialize Project
+
+Navigate to the directory on your machine, open a bash shell then type:
 
 ```bash
 npm init
@@ -42,7 +48,9 @@ and go through the process (we can always edit later). Once this is done open yo
   }
 }
 ```
-now make sure to replace the following items with your values, below is an example for this repo:
+now make sure to replace the following ${ITEMS} with your values, below is an example for this repo:
+
+> Example: `"${YOUR_SCOPE}/${YOUR_REPO_NAME}"` becomes `"@development-laboratories/guide"`
 
 |property|description|example|
 |--------|-----------|-------|
@@ -50,3 +58,5 @@ now make sure to replace the following items with your values, below is an examp
 |YOUR_REPO_NAME|The name of the repository you created earlier|guide|
 |YOUR_REPO_URL|The git url of the repository you created earlier| [git@github.com:development-laboratories/guides.git](git@github.com:development-laboratories/guides.git) |
 |YOUR_NAME|Any name you want to be associated|John Doe|
+
+

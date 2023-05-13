@@ -2,28 +2,47 @@
 
 - [GitHub SSH Key Documentation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
-Create a new SSH key that will be used to deploy your updates:
+## 1. Create a new SSH key name `deploy.pub` that will be used to deploy update from GitHub to your server
 
-```
+```bash
 ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
 
-## Copy SSH public key to your server
+## 2. Copy keys to server
 
-add to the remote host via
-```
-ssh-copy-id -i ~/.ssh/id_rsa.pub YOUR_USER_NAME@IP_ADDRESS_OF_THE_SERVER
-```
-or using the keychain
-```
-ssh-add --apple-use-keychain ~/.ssh/staging
+**Important** make sure to now copy the `<your_key>.pub` to the remote host via
+```bash
+ssh-copy-id -i ~/.ssh/<your_key>.pub YOUR_USER_NAME@IP_ADDRESS_OF_THE_SERVER
 ```
 
-Then add the `~/.ssh/staging` key to your repositories secrets named
+## 3. Create GitHub secrets 
 
-- `SSH_DEPLOY_KEY`: `~/.ssh/staging` // the private key
-- `SSH_DEPLOY_HOST`: `192.168.0.1` // remote servers ip
-- `SSH_DEPLOY_USER`: `root` // or the user you will SSH as
+Copy the all of the text from your `~/.ssh/deploy` (including the `-- BEGIN / KEY --`) by running
+
+```bash
+# copy to clipboard
+pbcopy < ~/.ssh/soladex_deploy
+```
+or
+```bash
+# echo to terminal
+cat < ~/.ssh/soladex_deploy
+```
+
+```
+-----BEGIN OPENSSH PRIVATE KEY-----
+...        <omitted>
+-----END OPENSSH PRIVATE KEY-----
+```
+
+|secret|value|description|
+|SSH_DEPLOY_KEY| <~/.ssh/deploy|
+|SSH_DEPLOY_HOST| 198.199.98.58|
+|SSH_DEPLOY_USER| root|
+```
+
+<img width="1329" alt="Screenshot 2023-05-13 at 4 41 36 PM" src="https://github.com/development-laboratories/guides/assets/10716803/fb6d72b4-f3d4-4227-a0d0-2ffdd56cbda8">
+
 
 Next add the following to a GitHub action:
 
@@ -39,13 +58,13 @@ jobs:
       - name: Configure SSH
         run: |
           mkdir -p ~/.ssh/
-          echo "$SSH_KEY" > ~/.ssh/staging.key
-          chmod 600 ~/.ssh/staging.key
+          echo "$SSH_KEY" > ~/.ssh/deploy.key
+          chmod 600 ~/.ssh/deploy.key
           cat >>~/.ssh/config <<END
-          Host staging
+          Host deploy
             HostName $SSH_HOST
             User $SSH_USER
-            IdentityFile ~/.ssh/staging.key
+            IdentityFile ~/.ssh/deploy.key
             StrictHostKeyChecking no
           END
         env:

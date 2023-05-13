@@ -1,31 +1,22 @@
 # Publish NPM Package
-By Colin Teahan - May 12th, 2023
+By [Colin Teahan](https://www.linkedin.com/in/colin-teahan/) on **May 12th, 2023**
 
-The following guide will teach you how to build and publish a public package to npm.
+The following guide will teach you how to build and publish a public package to npm
+
+|software|version|resources|
+|--------|-------|--------|
+|bash    |3.2.57 |https://formulae.brew.sh/formula/bash|
+|node    |16.15.0|https://nodejs.org/en/download|
+|npm     |7.5.2  |https://docs.npmjs.com/downloading-and-installing-node-js-and-npm|
+|npx     |8.5.5  |https://www.npmjs.com/package/npx|
 
 # Quick Start
 
-For experienced users you can clone a blank GitHub repository to your machine and run the following script in the projects root directory, otherwise skip to the next section.
+Create a new GitHub repository, clone it to your machine and from the pojects root directory run (*otherwise skip to next section*)
 
 ```bash
 curl -O -L https://github.com/development-laboratories/scripts/releases/download/v1.0.0/dnode.sh
 bash dnode.sh
-```
-
-# Getting Started
-
-This guide was written using the versions listed below, for best results use similar versions.
-
-|npm|node|
-|----|-------|
-|7.5.2 |12.22.12|
-
-## Quick State
-
-Clone your GitHub repo to your local machine and run the following scipt:
-
-```bash
-npm init -y
 ```
 
 ## Create GitHub Repository
@@ -34,14 +25,18 @@ The first thing we are going to want to do is create a simple project which will
 
 Once you are logged in let's create a new repository and clone that to your local machine.
 
-# Initialize Project
+## Installation
 
-Navigate to the directory on your machine, open a bash shell then type:
+Navigate to your projects directory on your machine and run the following
 
 ```bash
-npm init
+npm install -g npx
+npm init -y
+npx
 ```
-and go through the process (we can always edit later). Once this is done open your editor of choice and add the following to your `package.json`
+
+
+## Configuring Package.json
 
 ```bash
 {
@@ -66,7 +61,7 @@ and go through the process (we can always edit later). Once this is done open yo
 }
 ```
 
-now make sure to replace the following ${ITEMS} with your values, below is an example for this repo:
+now make sure to replace the following **${ITEMS}** with your values, below is an example for this repo:
 
 >
 > Example: `"${YOUR_SCOPE}/${YOUR_REPO_NAME}"` becomes `"@development-laboratories/guide"`

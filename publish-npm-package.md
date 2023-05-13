@@ -5,13 +5,12 @@ The following guide will teach you how to build and publish a public package to 
 
 # Quick Start
 
-For experienced users clone a blank GitHub repository to your machine and run the following in the projects root directory:
+For experienced users you can clone a blank GitHub repository to your machine and run the following script in the projects root directory, otherwise skip to the next section.
 
 ```bash
 curl -O -L https://github.com/development-laboratories/scripts/releases/download/v1.0.0/dnode.sh
 bash dnode.sh
 ```
-Otherwise skip to the next section.
 
 # Getting Started
 

@@ -21,9 +21,7 @@ bash dnode.sh
 
 ## Create GitHub Repository
 
-The first thing we are going to want to do is create a simple project which will become our custom pacakge. Go to [GitHub](https://github.com/) and create and account if needed.
-
-Once you are logged in let's create a new repository and clone that to your local machine.
+The first thing we are going to want to do is create a simple project which will become our custom pacakge. Go to [GitHub](https://github.com/) and create and account if needed. Once you are logged in let's create a new repository and clone that to your local machine.
 
 ## Installation
 
@@ -34,7 +32,6 @@ npm install -g npx
 npm init -y
 npx
 ```
-
 
 ## Configuring Package.json
 
@@ -80,5 +77,4 @@ Go to your GitHub account and create a Personal Access Token (Classic) which can
 
 `Profile > Settings > Developer Settings > Personal Access Token > Classic`
 
-or by cli
 

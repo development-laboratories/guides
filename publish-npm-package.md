@@ -59,4 +59,11 @@ now make sure to replace the following ${ITEMS} with your values, below is an ex
 |YOUR_REPO_URL|The git url of the repository you created earlier| [git@github.com:development-laboratories/guides.git](git@github.com:development-laboratories/guides.git) |
 |YOUR_NAME|Any name you want to be associated|John Doe|
 
+## Create GitHub Personal Access Token (Classic)
+
+Go to your GitHub account and create a Personal Access Token (Classic) which can be [clicking here](https://github.com/settings/tokens) or navigating to
+
+`Profile > Settings > Developer Settings > Personal Access Token > Classic`
+
+or by cli
 

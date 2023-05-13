@@ -48,9 +48,12 @@ and go through the process (we can always edit later). Once this is done open yo
   }
 }
 ```
+
 now make sure to replace the following ${ITEMS} with your values, below is an example for this repo:
 
+>
 > Example: `"${YOUR_SCOPE}/${YOUR_REPO_NAME}"` becomes `"@development-laboratories/guide"`
+>
 
 |property|description|example|
 |--------|-----------|-------|

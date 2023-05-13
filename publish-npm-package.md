@@ -11,6 +11,14 @@ This guide was written using the versions listed below, for best results use sim
 |----|-------|
 |7.5.2 |12.22.12|
 
+## Quick State
+
+Clone your GitHub repo to your local machine and run the following scipt:
+
+```bash
+npm init -y
+```
+
 ## Create GitHub Repository
 
 The first thing we are going to want to do is create a simple project which will become our custom pacakge. Go to [GitHub](https://github.com/) and create and account if needed.

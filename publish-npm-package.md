@@ -6,14 +6,15 @@ The following guide will teach you how to build and publish a public package to 
 ## Quick Start
 
 Clone a GitHub repository you own and paste the following into a file called `quick-start.sh`
-
+<detail>
+  <summary>Click to view source code</summary>
 ```bash
 #!/bin/bash
 #
 # create a new file named dnode.sh and paste this file into it,
 # then run the following command in the terminal:
 #
-#     bash dnode.sh
+#     bash quick-start.sh
 #
 
 # add node_modules to .gitignore
@@ -71,6 +72,13 @@ echo '{
 npm install
 npm run build
 npm run start
+```
+</details>
+
+and the run the script with the following command
+
+```bash
+bash quick-start.sh
 ```
 
 ## Getting Started

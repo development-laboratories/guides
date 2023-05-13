@@ -22,22 +22,31 @@ and go through the process (we can always edit later). Once this is done open yo
 
 ```bash
 {
-  "name": "@YOUR_SCOPE/YOUR_REPO_NAME",
+  "name": "${YOUR_SCOPE}/${YOUR_REPO_NAME}",
   "version": "1.0.0",
   "description": "my first npm package!",
   "main": "index.js",
   "scripts": {
-    "upload": "npm publish --scope=@YOUR_SCOPE --registry=https://npm.pkg.github.com/",
+    "prepublish":
+    "upload": "npm publish --scope=${YOUR_SCOPE} --registry=https://npm.pkg.github.com/",
     "test": "exit"
   },
   "repository": {
     "type": "git",
-    "url": "YOUR_REPO_URL"
+    "url": "${YOUR_REPO_URL}"
   },
-  "author": "YOU_NAME",
+  "author": "${YOUR_NAME}",
   "license": "MIT",
   "publishConfig": {
-    "@YOUR_SCOPE:registry": "https://npm.pkg.github.com"
+    "${YOUR_SCOPE}:registry": "https://npm.pkg.github.com"
   }
 }
 ```
+now make sure to replace the following items with your values, below is an example for this repo:
+
+|property|description|example|
+|--------|-----------|-------|
+|YOUR_SCOPE|This will either be your GitHub @username or @org and your add the @ symbol in front.| @development-laboratories |
+|YOUR_REPO_NAME|The name of the repository you created earlier|guide|
+|YOUR_REPO_URL|The git url of the repository you created earlier| git+ssh@github.com/development-laboratories/guide|
+|YOUR_NAME|Any name you want to be associated|John Doe|
